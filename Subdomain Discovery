@@ -1,0 +1,35 @@
+Subdomain Discovery
+
+
+
+
+mailserver, database avilable publicaly 
+nslookup -type=any vulnbegin.co.uk 8.8.8.8
+nslookup -type=any vulnlawyers.co.uk 8.8.8.8
+
+First, we'll start by trying to find any useful records that the DNS Server wants to tell us. We can use the inbuilt nslookup tool for this, and we'll also use the -type=any option, so it will return any results to us and not just A records.
+
+You'll see from the results that a TXT record can be found with a flag in it. Obviously, you wouldn't find anything like this in a real world engament but instead, you might find useful information stored in a TXT record such a how the domain might protect their email services against spam or a string that authenticates the domain for a 3rd party service.
+
+
+
+
+DNS Bruteforce
+
+Next, we'll try and find some subdomains by using DNS brute-forcing. This uses the subdomains.txt file, which is a list of commonly used subdomains. Each one of these subdomains is tried against the domains DNS server to see whether it can find a record of it. Instead of doing this process manually, we can use the dnsrecon application to automate it.
+
+dnsrecon -d vulnbegin.co.uk -D ~/wordlists/subdomains.txt -t brt
+
+dnsrecon -d vulnlawyers.co.uk -D /home/kali/Downloads/wordlists/subdomains.txt -t brt
+
+
+
+
+SSL Certificate Records
+
+A public record gets created whenever an SSL certificate is generated for a website. So no matter how random a subdomain is, if you create an SSL certificate for it someone will be able to find it.
+
+A great resource for these SSL records is {  crt.sh   } if you visit https://crt.sh/?q=vulnbegin.co.uk you'll be able to see records of SSL certificates that have been registered for vulnbegin.co.uk
+https://crt.sh/?q=vulnbegin.co.uk
+
+

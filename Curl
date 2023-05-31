@@ -1,0 +1,8 @@
+Curl
+
+The curl command is used to send HTTP requests from the command line. The specified options do the following:
+
+-H "X-Token: 492E64385D3779BC5F040E2B19D67742" adds a custom header "X-Token" with the specified value.
+-H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" adds a "Cookie" header with the specified value.
+http://server.vulnbegin.co.uk/user is the URL of the resource being requested.
+With these options, curl will send an HTTP GET request to the specified URL, including the custom headers "X-Token" and "Cookie". The server will respond with the content of the requested resource and the response headers.

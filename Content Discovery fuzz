@@ -1,0 +1,55 @@
+Content Discovery
+
+Now we can move onto our next method of recon which is Content Discovery this involved using ffuf and our contents.txt wordlist to rapidly search the site for any hidden files or directories.
+
+
+ffuf -w ~/wordlists/content.txt -t 1 -p 0.1 -H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" -u http://www.vulnbegin.co.uk/FUZZ -mc all -fc 404 
+
+
+ffuf -w /home/kali/Downloads/wordlists/content.txt -t 3 -p 0.1 -H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" -u http://www.vulnlawyers.co.uk/FUZZ -mc all -fc 404
+
+-w     Wordlist  file  path  and (optional) keyword separated by colon. eg. '/path/to/wordlist:KEY‐WORD'
+                     
+-H     Header "Name: Value", separated by colon. Multiple -H flags are accepted.
+-u     Target URL
+
+MATCHER OPTIONS:
+	-mc    Match HTTP status codes, or "all" for everything. (default: 						200,204,301,302,307,401,403)
+
+    -ml    Match amount of lines in response
+
+    -mr    Match regexp
+
+    -ms    Match HTTP response size
+
+    -mw    Match amount of words in response
+
+FILTER OPTIONS:
+
+	-fc    Filter HTTP status codes from response. Comma separated list of codes and ranges
+
+    -fl    Filter by amount of lines in response. Comma separated list of line counts and ranges
+
+    -fr    Filter regexp
+
+    -fs    Filter HTTP response size. Comma separated list of sizes and ranges
+
+    -fw    Filter by amount of words in response. Comma separated list of word counts and ranges
+
+INPUT OPTIONS:
+
+     -w     Wordlist  file  path 
+
+EXAMPLE USAGE:
+       Fuzz file paths from wordlist.txt, match all responses but filter out those with  content-size  42.   Col‐ored, verbose output.  ffuf -w wordlist.txt -u https://example.org/FUZZ -mc all -fs 42 -c -v
+       
+
+        Fuzz  Host-header,  match  HTTP 200 responses.  ffuf -w hosts.txt -u https://example.org/ -H "Host:FUZZ" -mc 200
+              
+
+        Fuzz POST JSON data. Match all responses not containing  text  "error".   ffuf  -w  entries.txt  -u
+        https://example.org/ -X POST -H "Content-Type: application/json" -d '{"name": "FUZZ", "anotherkey":"anothervalue"}' -fr "error"
+              
+
+        Fuzz multiple locations. Match only responses reflecting the value of "VAL" keyword. Colored.  ffuf -w params.txt:PARAM -w values.txt:VAL -u 
+         https://example.org/?PARAM=VAL -mr "VAL" -c     

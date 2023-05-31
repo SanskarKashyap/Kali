@@ -1,0 +1,7 @@
+KALI CODE 
+
+rm -rf * -----> remove all the files in directory 
+
+service apache2 start
+cd /var/www/html -----> place your file here ,, and change its extention jo .zip then we can acess it throuch any machine ether host or any other vm 
+

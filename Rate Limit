@@ -1,0 +1,7 @@
+Rate Limit 
+
+The below example shows how you can apply rate limits to the ffuf tool using the -t and -p switches ( 1 thread and pause for 0.1 seconds between requests )
+
+
+
+ffuf -w ~/wordlists/contents.txt -t 1 -p 0.1 -H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" http://challenge.test/FUZZ

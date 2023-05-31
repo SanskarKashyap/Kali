@@ -1,0 +1,17 @@
+FTP 
+
+
+
+ftp: invalid option -- 'h'
+usage: ftp {Target IP}
+		   [-46AadefginpRtVv] [-N NETRC] [-o OUTPUT] [-P PORT] [-q QUITTIME]
+           [-r RETRY] [-s SRCADDR] [-T DIR,MAX[,INC]] [-x XFERSIZE]
+           [[USER@]HOST [PORT]]
+           [[USER@]HOST:[PATH][/]]
+           [file:///PATH]
+           [ftp://[USER[:PASSWORD]@]HOST[:PORT]/PATH[/][;type=TYPE]]
+           [http://[USER[:PASSWORD]@]HOST[:PORT]/PATH]
+           [https://[USER[:PASSWORD]@]HOST[:PORT]/PATH]
+           ...
+       ftp -u URL FILE ...
+       ftp -?

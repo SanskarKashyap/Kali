@@ -1,0 +1,16 @@
+How to install .DEB file 
+
+* To install with Advanced Package Tool (apt), use 
+
+            sudo apt install ./filename.deb"
+
+
+* To install with Dpkg, use 
+
+			sudo dpkg -i filename.deb
+
+
+direct install to kali 
+			sudo apt install -y dnsrecon
+
+			

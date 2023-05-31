@@ -1,0 +1,12 @@
+IDOR
+We know the user ID 27 exists but maybe we can view other user ID's?
+
+Run the below command which will search for other user ID's between 1-100
+
+seq 1 100 | ffuf -w - -t 1 -p 0.1 -H "X-Token: 492E64385D3779BC5F040E2B19D67742" -H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" -u http://server.vulnbegin.co.uk/user/FUZZ -mc all -fc 404
+
+The above command has found user ID's 5 and 27. 27 is obviously ours but 5 is a new one lets try looking at the /user/5 endpoint to see what is being displayed.
+
+Okay so this has resulted in displaying an error that we don't have permission to view this user. But we know from before there is a /user/{id}/info endpoint and sometimes other endpoints are not secured in the same way.
+
+Brilliant, this has given us user information for user ID 5 and also the last flag

