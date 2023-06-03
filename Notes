@@ -1,0 +1,74 @@
+OSI modle - 7 layers - {application, presentation, session, transport, network, data link, physical}
+TCP/IP - 4-5 layers - {application, transport, network, data link, physical }
+
+Q1 How TCP works ?
+ Total 6 Flags work in TCP 
+    1. SYN syncronization
+    2. ACK acknowledgement
+    3. FIN finish
+    4. RST reset - reset the connection
+    5. PSH push - send all the buffer data immidetely 
+    6. URG urgent - data contained in this packet is processed urgently 
+
+
+Domain Name 
+    * ip Name
+    * easy to remember
+
+DNS - Domain Name System
+    * DNS server - convert domain name to ip address
+    * DNS server - convert ip address to domain name
+
+Zone Files -it is a text file that contains DNS records , do Ip mapping  {DNS server use this file to resolve domain name to ip address}
+    * A - ip address of domain name
+    * CNAME - alias of domain name / forward domain or subdomain to another domain 
+    * MX - direct mail to mail server
+    * NS - name server
+    * PTR - reverse of A record {reverse lookup}
+    * SOA - start of authority /  email, serial number, refresh, retry, expire, minimum TTL ,, (Domain's Admin info are stored here)
+    * TXT - any DNS text record entered by ADMIN 
+    * AAAA - ipv6 address
+    * SRV - service location record {specify hostname and port number of servers for specified services}
+
+Types of Request Method 
+    * GET -data transfder through URL , easily visible and not secure 
+    * HEAD - same as get but without body, trsnfer status line and header only
+    * POST - send user information through body , not visible and secure in HTML format 
+    * PUT - update data to server
+    * DELETE - delete data from server
+    * OPTIONS - describe the communication options for the target resource
+    * TRACE - get diagnostic information from server {message loop back along the path to the client}
+    * CONNECT - establish tunnel to server
+
+
+
+Use of Ethical Hacking 
+    * system Hardening - make system secure
+    *network security - make network secure {firewall, IDS, IPS, VPN} , if data breach in network then system Hardening is of no use 
+    * Defeat Hackers - find vulnerability and fix it before hacker find it {healthy ego :D} 
+    *increase cyber sequitiy  
+    *Digital Wellbieing - so that comman people can feel safe that system is working properly and no one is trying to hack it
+
+
+cyber laws in india 
+https://www.meity.gov.in/
+
+Basic Files System in Linux 
+    * /bin - binary files / executable files / basic commands {ls,cd,cat,rm,mkdir,..}
+    * /sbin - system binary files / system commands {shutdown, sysctl, reboot, ifconfig, fdisk,..}
+    * /etc - configuration files
+    * /tmp - temporary files
+    * /usr/bin - apllication binary files / user commands {firefox, gedit,..}
+    * /usr/share - application support and data files
+    * /home - personal directory of user
+    * /root - Home directory of super user (Admin user)
+
+    * /boot - boot loader files / kernel files {grub, vmlinuz, initrd}
+    * /dev - device files 
+    * /var - variable files
+    * /lib - library files
+    * /media - removable media
+    * /proc - process information
+    
+
+    
