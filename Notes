@@ -71,4 +71,75 @@ Basic Files System in Linux
     * /proc - process information
     
 
-    
+How be Anonmous on Internet 
+
+    Usage:
+    anonsurf {start|stop|restart|change|status}
+
+    start - Start system-wide anonymous
+          tunneling under TOR proxy through iptables
+    stop - Reset original iptables settings
+          and return to clear navigation
+    restart - Combines "stop" and "start" options
+    change - Changes identity restarting TOR 
+    status - Check if AnonSurf is working properly
+    ----[ I2P related features ]----
+    starti2p - Start i2p services
+    stopi2p - Stop i2p services
+
+
+    change mac address
+    * macchanger -r eth0 ---> change mac address of eth0 interface , 2 to 3 times to do lareing 
+    setup macchanger.sh file in auto startup ,, so that mac changer change the mac address , once the system restrat
+
+
+
+
+    * use VPN
+    * use TOR browser
+    * use proxy server
+    * use public wifi
+    * use public computer
+    * use fake email id
+    * use fake name
+    * use fake address
+    * use fake phone number
+    * use fake credit card
+    * use fake bank account
+    * use fake social media account
+    * use fake photo
+    * use fake voice
+    * use fake fingerprint
+    * use fake face
+    * use fake DNA
+    * use fake body
+    * use fake brain
+    * use fake soul
+    * use fake life
+    * use fake death
+    * use fake universe
+    * use fake god
+    * use fake reality
+    * use fake fake
+    * use fake fake fake
+    * use fake fake fake fake
+    * use fake fake fake fake fake
+    * use fake fake fake fake fake fake
+    * use fake fake fake fake fake fake fake
+    * use fake fake fake fake fake fake fake fake
+    * use fake fake fake fake fake fake fake fake fake
+    * use fake fake
+
+
+    FootPrinting Through Search Engine
+
+    * Not evil - search engine for hackers
+    * Shodan - search engine for hackers
+    * Censys - search engine for hackers
+
+    * Google Hacking Database - search engine for hackers {https://www.exploit-db.com/google-hacking-database}
+    * Google Dorks - {Cashe allintext:, allintitle:, allinurl:, filetype:, intext:, intitle:, inurl:, link:, site:, indexof:}
+    * Bing
+    * Yahoo
+    * DuckDuckGo
+
