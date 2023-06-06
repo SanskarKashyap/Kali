@@ -143,3 +143,19 @@ How be Anonmous on Internet
     * Yahoo
     * DuckDuckGo
 
+    *Social Media - location ta , bith date (common password)
+
+    Website FootPrinting
+    * knowing Website tech {Netcraft,Wappalyzer, } ----> https://builtwith.com/ 
+    * knowing Website IP {ping, nslookup, dig, whois, traceroute, netstat, Shodan}
+    *SubDomin of website {crt.sh, sublist3r, subdomainfinder, dnsdumpster}
+    *Finding hidden link {link grpher(firefox),link Extractor &DIRB} ----> https://www.webtoolhub.com/
+    * check sequrity header {securityheaders.com}
+    *Finding hidden files {dirb, dirbuster, gobuster, wfuzz}
+    * IP and Buffer size of website ---> ping -s 1000 -M do -c 1 www.google.com    ---> by hit and trial method we find the buffer size of google is 1472 
+    *ssl test {ssllabs.com/ssltest} -->https://www.ssllabs.com/
+    *wayback machine -----> mistakely any sensetive information is uploaded on website and then deleted , then we can find that information from wayback machine
+    *cheaking SPF record n more   ----> https://mxtoolbox.com/spf.aspx
+    *wordpress foot printing --> https://whatcms.org
+
+    

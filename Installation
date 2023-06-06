@@ -1,0 +1,26 @@
+git clone {repolink}
+
+
+Check any update .sh file is present or not in the directory
+			-ll
+
+			if it is present then run the file ----> sudo ./{filename}.sh
+
+check any update .txt file is present or not in the directory
+			-ll
+
+			if it is present then run the file ----> pip install -r {filename}.txt
+
+check any update .py file is present or not in the directory
+            -ll
+
+            if it is present then run the file ----> python3 {filename}.py
+
+give exucution permition to the file
+            -sudo chmod +x {filename}.sh
+            -sudo chmod +x {filename}.py
+
+run the file
+
+            -sudo ./{filename}.sh
+            -python3 {filename}.py

