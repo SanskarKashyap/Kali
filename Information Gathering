@@ -1,0 +1,167 @@
+robots.txt/sitemap.xml,sitemaps.xml
+HOST
+WhatWeb 
+Whois --> https://whois.domaintools.com/
+BuiltWith
+DNS Recon --> https://dnsdumpster.com/
+Firewall Detect ---> https://www.shodan.io/ 
+Directory Enumeration --> dirb
+Subdomain Enumeration --> https://crt.sh/
+Email harvesting --> https://hunter.io
+Leaked Databases --> https://haveibeenpawned.com
+Google Dorks ---> https://www.exploit-db.com/google-hacking-database
+Traceroute ---> https://traceroute-online.com/
+
+==========================================================================
+Username - drop
+password - 
+Username:Cyfy
+Password:Fyxyxyxy
+
+============== robots.txt =================
+Disallow: /wp-content/uploads/wpforms/
+
+============== sitemap =================
+
+Sitemap: https://drop.org.in/sitemap_index.xml
+         https://drop.org.in/2022/10/05/hello-world/
+         https://drop.org.in/contact-us/
+         https://drop.org.in/?wpws_page=webinar-unsubscribe
+         https://drop.org.in/?wpws_page=webinar-overview
+         
+============== HOST =================
+drop.org.in has address 103.152.79.223
+
+============== What Web ===============
+Email[droporganization@gmail.com]
+HTTPServer[LiteSpeed]
+JQuery[3.6.3]
+ncommonHeaders[link,x-litespeed-cache,alt-svc]
+WordPress
+X-Powered-By[PHP/7.4.33]
+Open-Graph-Protocol[website]
+
+
+================== Whois ================
+Domain Name: drop.org.in
+Registry Domain ID: DF0D75BC68AAC43BAAC18C100CE83D11E-IN
+Registrar WHOIS Server:
+Registrar URL: www.godaddy.com
+Updated Date: 2023-05-04T09:07:49Z
+Creation Date: 2019-07-21T11:54:39Z
+Registry Expiry Date: 2026-07-21T11:54:39Z
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrant State/Province: West Bengal
+
+===================== DNS Recon =========================
+[*]      SOA dns1.zoomnameserver.com 103.152.79.223
+[*]      NS dns1.zoomnameserver.com 103.152.79.223
+[*]      Bind Version for 103.152.79.223 root@bh-centos-7.dev.cpanel.net)"
+[*]      NS dns2.zoomnameserver.com 103.152.79.222
+[*]      Bind Version for 103.152.79.222 root@bh-centos-7.dev.cpanel.net)"
+[*]      MX drop.org.in 103.152.79.223
+[*]      A drop.org.in 103.152.79.223
+[*]      TXT drop.org.in v=spf1 +a +mx +ip4:103.152.79.222 ~all
+[*]Enumerating SRV Records
+[+]      SRV _autodiscover._tcp.drop.org.in cpanelemaildiscovery.cpanel.net 208.74.121.152 443
+[+]      SRV _autodiscover._tcp.drop.org.in cpanelemaildiscovery.cpanel.net 184.94.204.7 443
+
+
+=============== Firewall Detect =================
+LiteSpeed (LiteSpeed Technologies) WAF
+Imunify 360 WAF 
+
+================ Directory Enumeration ====================
+
+dirb http://drop.org.in/
+
+================ Sub Domain Enumeration ====================
+sublist3r -d drop.org.in
+
+================ Email harvesting ==================
+
+theHarvester -d drop.org.in -b baidu
+hunter.io
+
+================Leaked Databases================
+bugmenot.com
+haveibeenpawned.com
+
+================ Google Dorks =================
+inurl: eg:- inurl:.php?id=
+
+intitle: eg:- intitle: admin login.php
+
+intext: eg:- intext:login
+
+site:  eg:- site:tesla.com filetype:pdf
+
+filetype: eg:- site:tesla.com filetype:pdf
+
+index of/ eg:- index of /movies
+
+"" eg:- site:drop.org.in "certificate.zip"
+
+
+
+
+Illegl TOOLs to GEther personal information
+https://www.nirsoft.net/utils/web_browser_password.html
+https://www.nirsoft.net/utils/wireless_key.html
+https://www.nirsoft.net/utils/router_password_recovery.html
+https://www.nirsoft.net/utils/remote_desktop_password.html
+
+https://www.sordum.org/9480/defender-control-v2-1/
+https://www.sordum.org/9486/windows-update-blocker-v1-7/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
