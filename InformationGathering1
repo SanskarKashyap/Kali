@@ -1,0 +1,126 @@
+RFI,LFI,AUTH bypass,SQL,xss,CSRF,HTML
+
+
+1. whois lookup     
+
+2. DNS Recon
+
+3.WAF Detection
+
+4.Subdomain Enumeration
+
+5. Whatweb Scan
+
+6. Google Dork
+
+7. Email Harvesting
+
+8. Builtwith Extension
+
+9. Leaked Password & Databases
+
+10.robots.txt & sitemap.xml / sitemaps.xml
+
+11.Directory Enumeration
+
+12. Mail information gathering
+
+
+
+Target - https://drop.org.in
+
+============== whois ===============
+        whois  drop.org.in
+
+Domain Name: drop.org.in
+Registry Domain ID: DF0D75BC68AAC43BAAC18C100CE83D11E-IN
+Registrar WHOIS Server:
+Registrar URL: www.godaddy.com
+Updated Date: 2023-05-04T09:07:49Z
+Creation Date: 2019-07-21T11:54:39Z
+Registry Expiry Date: 2026-07-21T11:54:39Z
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrant Organization: Development & Research Organizations Planning
+Registrant State/Province: West Bengal
+
+=================== DNS ==================
+    dnsrecon -d drop.org.in
+
+[*]    SOA dns1.zoomnameserver.com 103.152.79.223
+[*]    NS dns2.zoomnameserver.com 103.152.79.222
+[*]    Bind Version for 103.152.79.222 root@bh-centos-7.dev.cpanel.net)"
+[*]    NS dns1.zoomnameserver.com 103.152.79.223
+[*]    Bind Version for 103.152.79.223 root@bh-centos-7.dev.cpanel.net)"
+[*]    MX drop.org.in 103.152.79.223
+[*]    A drop.org.in 103.152.79.223
+[*]    TXT drop.org.in v=spf1 +a +mx +ip4:103.152.79.222 ~all
+[*] Enumerating SRV Records
+[+]    SRV _autodiscover._tcp.drop.org.in cpanelemaildiscovery.cpanel.net 184.94.204.7 443
+[+]    SRV _autodiscover._tcp.drop.org.in cpanelemaildiscovery.cpanel.net 208.74.121.152 443
+
+
+=================== WAF detection ====================
+                    wafw00f drop.org.in
+LiteSpeed (LiteSpeed Technologies) WAF
+
+=================== Subdomain Enumeration ====================
+sublist3r -d drop.org.in -e google,yahoo,bing,baidu -o subdomains.txt
+No Subdomain Found 
+
+
+=================== Whatweb Scan ====================
+                whatweb drop.org.in
+                whatweb --aggression 3 drop.org.in  
+
+Email[droporganization@gmail.com]
+HTTPServer[LiteSpeed]
+JQuery[3.6.4]
+PHP[7.4.33]
+WordPress
+Open-Graph-Protocol[website]
+
+
+=================== Google Dorks ================
+
+inurl:
+
+intitle:
+
+intext:
+
+site:
+
+filetype:
+
+""
+
+index of /movie
+
+
+===================== Email Harvesting ====================
+
+No email found
+
+===================== Databases & Leaked Password =====================
+
+Email - roshanb1231@gmail.com [canva,deppn]
+
+===================== robots.txt & sitemap.xml =========================
+Disallow: /wp-content/uploads/wpforms/
+
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+Sitemap: https://drop.org.in/sitemap_index.xml
+
+admin panel - wp-login.php
+
+===================== Directory Enumeration =====================
+
+directory - /wp-login.php
+
+===================== Mail Information gathering =====================
+gmail --> original email --> recived email --> email header --> ip address --> ip location --> ip owner --> ip owner location 

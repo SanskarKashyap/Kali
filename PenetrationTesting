@@ -1,0 +1,55 @@
+step of Penetration Testing 
+
+1 prepare for the test -- > written permission 
+2 Constract a plan --> tool tyarr karna
+3 Build a team --> 2-3 log
+4 Gather information --> target ke bare me jankari jutana
+5 Identify vulnerabilities --> vulnurability ko find karna
+6 Exploit vulnerabilities --> vulnurability ko use karna
+7 Report findings --> report banana
+8 Remediate --> vulnurability ko fix karna
+9 Verify remediation --> vulnurability ko check karna
+10 Report --> report banana
+
+
+Diffrence between VAPT ant PT
+
+Scope: VAPT has a broder scope than PT
+VAPT include both Vulnarability Assessment and Penetration Testing {where Valnarability Assessment can be done with automation tools }
+PT is done manually and it is more focused on finding the vulnerabilities and exploiting them
+
+
+
+Types of PT
+
+Black Box Testing - It start with zero knowledge of the target's technology infrastructure and it is more like a real world attack , the 
+                    goal of this test is to quickly identify easy-to-exploit vulnerabilities and misconfiguration
+                    It is also known as blind testing
+
+Grey Box Testing - takes a step further than black box testing , it start with partial knowledge of the target's technology infrastructure and sequrity measures 
+                    the goal of this testing is to learn details about vuln that can be exploted to a greater level then Black box testing 
+                    It is also known as partial testing
+
+White Box Testing - it is the most advanced type of testing , it start with full knowledge of the target's technology infrastructure. White box tester are
+                    typically the most esperienced and skilled testers 
+                    the goal of this inprove an organization's sequrity posture 
+
+
+External Test - it is done from outside the organization's network , it is also known as remote testing , without organtisation's knowledge
+                the goal of this test is to identify vulnerabilities that can be exploited by external attackers
+
+Internal Test - it aims to expose what damage could be done if an attacker is already inside the organisation's network , it is also known as on-site testing
+                the goal of this test is to identify vulnerabilities that can be exploited by malicious insiders  
+                {employees who arer likely to respond to social engineering or phishing attacks}
+
+Blind Test - in this test , tester is permited (onganisation knows about tha attack before hand(when,where)) , and all publicaly information is provided to the 
+            tester the goal of this test is to identify vulnerabilities that can be exploited by external attackers. 
+            Tester must use all their skills to find the vulnerabilities  
+
+
+Tips to become good Pen Tester 
+
+keep youself updated 
+practice Daily 
+participate in CTFs and hackathons
+Talk with experts , pentester , attend conferences , meetups

@@ -8,3 +8,6 @@ We'll try and set this cookie for you as much as possible but there will be time
 
 example 
 curl -H "Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnpPRzV3ZG1VMGFpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiJmMmZlZjI5MWI5ZjJlNWE1YjRkMjBjZTgwNzRlZTY1ZCJ9" http://challenge.test
+
+
+

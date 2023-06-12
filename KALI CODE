@@ -16,3 +16,70 @@ chmod ---> change module {permission}
     
  
    https://www.youtube.com/watch?v=x3IwvPvDpKE
+
+
+echo "hello world" > hello.txt ----> create a file and write hello world in it
+
+    cat hello.txt ----> read the file
+
+cp hello.txt Desktop/ ----> copy the file to desktop
+
+mv hello.txt Desktop/ ----> move the file to desktop
+
+rm hello.txt ----> remove the file
+
+
+internet 
+
+ip addr ----> show ip address (colourfull intetrface)
+ipconfig --> ip address
+iwconfig --> mode 
+
+id --> show user id if it is not 0 (root) then we not in highest pivilage
+
+# Create new user id 
+useradd -m -d /home/username -s /bin/bash username
+passwd username
+
+# how to use grep command
+grep -i "word" filename ----> search for word in file
+cat filename | grep -i "word" ----> search for word in file
+cat filename | grep word ----> search for word in file
+cat filename | grep -i "word" | wc -l ----> search for word in file and count the number of lines
+
+
+# how to zip a file 
+zip -r filename.zip filename1 filename2 ----> zip the file
+unzip filename.zip ----> unzip the file
+unzip -l filename.zip ----> list the file in zip file
+
+gzip filename ----> zip the file {tar.gz}
+gunzip filename.gz ----> unzip the file {tar.gz}
+
+
+# how to zip a file with password
+zip -r -e filename.zip filename1 filename2 ----> zip the file
+
+#how to find the file
+find / -name "*.txt" ----> find the txt in root directory or sub directory
+find / -name filename.txt ----> find the file in
+find / -name filename ----> find the file in root directory
+find / -name filename* ----> find the file in root directory
+
+
+#how to find a file with specific permission
+find / -perm 777 ----> find the file with permission 777 in root directory
+find / -perm 6000 -name "*.txt" ----> find the file with permission 6000 in root directory or sub directory
+find / -perm 4096 -name "*.txt" ----> find the file without root permission in root directory or sub directory
+
+#how to locate a file 
+locate rockyou.txt 
+
+#Date and time
+date ----> show date and time
+cal ----> show calender
+
+#ssh 
+ssh username@ipaddress ----> login to remote machine with ssh
+ssh -i key.pem username@ipaddress ----> login to remote machine with ssh with key
+ssh -i key.pem username@ipaddress -p portnumber ----> login to remote machine with ssh with key and port number

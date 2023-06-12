@@ -1,10 +1,10 @@
 robots.txt/sitemap.xml,sitemaps.xml
 HOST
 WhatWeb 
-Whois --> https://whois.domaintools.com/
+Whois --> https://whois.domaintools.com/ ; whois  drop.org.in
 BuiltWith
 DNS Recon --> https://dnsdumpster.com/
-Firewall Detect ---> https://www.shodan.io/ 
+Firewall Detect ---> https://www.shodan.io/  
 Directory Enumeration --> dirb
 Subdomain Enumeration --> https://crt.sh/
 Email harvesting --> https://hunter.io

