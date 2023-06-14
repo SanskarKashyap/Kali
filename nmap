@@ -1,0 +1,45 @@
+service postgresql start ---> to start metasploit database
+
+msfconsole ---> to start metasploit
+
+we started metasploit database because we need to seach for the exploit in the database from the vertion 
+details we got from the nmap scan 
+
+
+search samba 
+search samba type:auxiliary ----- > this seach is for the exploit we need to use , that can be found in msf
+
+
+
+
+
+or we can do this ny nmap 
+
+go to root directory 
+
+cd /usr/share/nmap/scripts
+
+ls | grep samba
+
+or 
+
+cd /usr/share/nmap/scripts; ls | grep samba
+
+
+nmap -p 445 --script=smb-vuln* {ip}      ----> don't write .nse in the end of the script name
+
+
+nmap -sU -F {ip}  ---> to scan udp ports with fast scan/full power
+
+nmap -sU -p 161 {ip} -oN scan_results.txt ---> to scan specific udp port and save the results in a file
+
+nmap -sC -sV -sT -sU -F -T4 -A -O -oN scan_results.txt {ip} ---> to scan all ports with all scan types and save the results in a file
+
+
+
+
+138/udp   open|filtered netbios-dgm       ----> if filtered then it means that the port is protected by a firewall
+139/udp   open|filtered netbios-ssn
+
+
+seachsploit samba 2.2.8 ---> to search for the exploit in the exploit database
