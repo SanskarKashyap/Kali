@@ -1,0 +1,2 @@
+
+    print(day.strip())
