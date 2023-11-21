@@ -57,4 +57,6 @@ All the commands that are executed in the above youtube video are mentioned in t
 15. http to https redirection
     sudo apt-get update
     sudo apt install certbot python3-certbot-apache
-    sudo certbot --apache -d [mysamplewebsite.com](http://mysamplewebsite.com/) -d [www.mysamplewebsite.com](http://www.mysamplewebsite.com/)
+    sudo certbot --apache -d [mysamplewebsite.com](http://mysamplewebsite.com/) -d [www.mysamplewebsite.com]
+    
+    (http://www.mysamplewebsite.com/)
