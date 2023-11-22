@@ -12,9 +12,13 @@ grater_than = 7<5
 
 print("7 < 5 :", grater_than)
 
-test = 7> 5 or 2<5
+test = 7> 15 or 2<5
 
-print("7 > 5 or 2 < 5 :", test)
+print("7 > 15 or 2 < 5 :", test)
+
+test = 7> 15 and 2<5
+
+print("7 > 15 or 2 < 5 :", test)
 
 test2 = 7>5 and 2<5
 

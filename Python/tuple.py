@@ -5,14 +5,15 @@
 
 
 
-tuple1 = (1,2,3,4,5,6,7,8,9,10)
+S_No = (1,2,3,4,5,6,7,8,9,10)
 
-print(tuple1)
+print(S_No)
 
-print(tuple1.count(1))# count the number of occurance of 1 in tuple1
+print(S_No.count(1))# count the number of occurance of 1 in S_No
 
-print(tuple1.index(7)) # return the index of 1 in tuple1
+print(S_No.index(7)) # return the index of 1 in S_No
 
-print(tuple.__sizeof__(tuple1)) # return the size of tuple1
+print(S_No.__sizeof__()) # return the size of S_No
 
-print(type(tuple1)) # return the type of tuple1
+print(type(S_No)) # return the type of S_No
+

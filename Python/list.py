@@ -1,10 +1,10 @@
 movie = ["Massan","Gangs Of Wassepur","Article 21","The Dark Knight"]
 
-print(movie.index("The Dark Knight"))
+print(movie.index("The Dark Knight"))  # indexing starts from 0
 
-print(movie[-1])
+print(movie[-1]) # returns last element
 
-print(movie[1:3])
+print(movie[1:3]) # returns elements from index 1 and 2
 
 print(movie[1:])
 

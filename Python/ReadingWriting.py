@@ -51,3 +51,7 @@ print(month.read()) # print in list format
 month.seek(0)
 print(month.readlines()) # printing the lines  
 # month.close()
+
+with open('Python/month.txt', 'r') as month:
+    print("\nIt is generally recommended to use the with statement when working with files. This ensures that the file is properly closed even if an exception occurs.")
+    print(month.read())

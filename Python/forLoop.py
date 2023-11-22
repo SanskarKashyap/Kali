@@ -13,3 +13,10 @@ print("\nList of IP addresses: ")
 for ip in range(1, 11):
     ping = f"ping 192.168.1.{ip}" # string formatting (python 3.6+)
     print(ping)
+
+print("\n")
+
+
+
+for i in range(10):
+    print(i)

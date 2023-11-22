@@ -11,10 +11,9 @@ print(employ)
 
 print(employ["IT"])
 
-employ.update({"IT": ["John", "Bob", "Alice", "Mike"]})
+employ.update({"IT": ["John1", "Bob1", "Alice1", "Mike1"]})   #overwrites existing one 
 
 print("Updated List 1:",employ)
-
 
 my_dict = {"name": "John", "age": 25, "city": "New York"}
 

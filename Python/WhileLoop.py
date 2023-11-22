@@ -1,6 +1,7 @@
 i = 0
-
-while i<20:
+while i < 20:
     print(i)
-    i+=1    
-    
+    if i == 0:
+        i = 1
+    else:
+        i = i + i
