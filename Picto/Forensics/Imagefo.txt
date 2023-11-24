@@ -1,0 +1,7 @@
+# Image Forensic
+
+https://fotoforensics.com/
+
+https://29a.ch/photo-forensics/#clone-detection
+
+exiftool cat.jpg
