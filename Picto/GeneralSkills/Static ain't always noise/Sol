@@ -1,0 +1,9 @@
+chmod 777 ltdis.sh
+
+
+
+#    ./ltdis.sh
+
+
+./ltdis.sh static
+
