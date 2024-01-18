@@ -5,6 +5,7 @@
 import hashlib
 from cryptography.fernet import Fernet
 import base64
+import sys 
 
 
 
@@ -226,7 +227,7 @@ def decrypt_full_version(key_str):
                  "Exiting trial version...")
     except FileExistsError:
     	sys.stderr.write("Full version of keygenme NOT written to disk, "+ \
-	                  "ERROR: 'keygenme.py' file already exists.\n\n"+ \
+	          "ERROR: 'keygenme.py' file already exists.\n\n"+ \
 			  "ADVICE: If this existing file is not valid, "+ \
 			  "you may try deleting it and entering the "+ \
 			  "license key again. Good luck")
