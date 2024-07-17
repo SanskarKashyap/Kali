@@ -31,7 +31,7 @@ shifters = []
 for i in range(KEY_LEN):
     shifters.append([])
 expected = [0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, 0x00, 0x00, 0x00, 0x0D, 0x49, 0x48, 0x44, 0x52]
-with open("bytes.txt") as f:
+with open("Picto/WEb/JSKiddi/bytes.txt") as f:
     bytes_arr = list(map(int, f.read().split(" ")))
     for i in range(KEY_LEN):
         for shifter in range(10):
